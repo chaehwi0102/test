@@ -5,7 +5,7 @@
 
 void itr_inorder_traversal(TreeNode* root) {
 	LinkedStackType s;
-	TreeNode* nptr;
+	TreeNode* nptr = root;
 
 	init(&s);
 
@@ -16,7 +16,7 @@ void itr_inorder_traversal(TreeNode* root) {
 		}
 
 		nptr = pop(&s);
-		printf("[%2d], nptr->data");
+		printf("[%2d]", nptr->data);
 
 		nptr = nptr->right;
 	}
